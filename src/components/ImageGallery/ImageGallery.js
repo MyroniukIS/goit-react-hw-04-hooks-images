@@ -67,7 +67,7 @@ export default function ImageGallery({ inputValue, toClick }) {
     return <RejectedView message={error.message} />;
   }
 
-  if ((status === 'resolved') !== []) {
+  if (status === 'resolved') {
     return (
       <ResolvedView
         images={images}
