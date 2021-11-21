@@ -1,13 +1,9 @@
 import PropTypes from 'prop-types';
-import err from './err.jpg';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function RejectedView({ message }) {
-  return (
-    <div>
-      <img src={err} alt="error" />
-      <p>{message}</p>
-    </div>
-  );
+  return toast.warn(message);
 }
 
 RejectedView.defaultProps = {
